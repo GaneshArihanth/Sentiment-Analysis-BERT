@@ -64,6 +64,10 @@ We didn't build BERT from scratch (that takes supercomputers!). We used a techni
 - **History Tracking**: Saving past analyses to a database.
 - **API Integration**: Allowing other developers to use this backend as a service.
 
+### Development Notebooks
+- **`modelcode.ipynb`**: The training ground. This notebook contains the code used to fine-tune the BERT model using the Amazon Polarity dataset. It covers data loading, tokenization, training loops, and evaluation metrics.
+- **`premodelaccess.ipynb`**: The testing ground. This notebook is used to load the saved model and run interactive predictions to verify its performance before deployment.
+
 ---
 
 ## ✨ Features
@@ -171,8 +175,8 @@ This project uses a **Split Deployment** strategy.
         -   `app.py`
         -   `requirements.txt`
         -   `Dockerfile`
-    -   **CRITICAL**: Drag and drop **ALL FILES** from your local `saved_bert_sentiment_model` folder into the root.
-        -   *Do not upload the folder itself, upload the files INSIDE it.*
+    -   **CRITICAL**: Drag and drop **ALL FILES** from your local `saved_bert_sentiment_model` folder into the root of the Space files.
+        -   **Do not upload the folder itself.** Open the `saved_bert_sentiment_model` folder on your computer, select all files inside (`config.json`, `pytorch_model.bin`, etc.), and drag *those files* into the browser.
         -   You should see `config.json`, `pytorch_model.bin`, etc., listed right next to `app.py`.
     -   Click **Commit changes to main**.
 4.  **Wait for Build**:
